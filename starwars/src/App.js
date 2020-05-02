@@ -16,6 +16,18 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <div className="character-container">
+        {characters.map((character) => (
+          <Character
+            key={character.id}
+            name={character.name}
+            img={character.image}
+            gender={character.gender}
+            status={character.status}
+            species={character.species}
+          />
+        ))}
+      </div>
     </div>
   );
 };
